@@ -13,9 +13,10 @@ test:
   override:
     - python3 scripts/merge_by_toc.py
     - ./scripts/generate_pdf.sh
+    - curl --upload-file output.pdf https://transfer.sh/TiDB-Doc-CN.pdf
 
 deployment:
   development:
-    branch: /*/
+    branch: master
     commands:
-      - curl --upload-file output.pdf https://transfer.sh/TiDB-Doc-CN.pdf
+      - echo ok
