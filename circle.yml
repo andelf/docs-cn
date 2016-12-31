@@ -15,7 +15,7 @@ test:
     - ./scripts/generate_pdf.sh
 
 deployment:
-  staging:
-    branch: *
+  development:
+    branch: /*/
     commands:
       - curl --upload-file output.pdf https://transfer.sh/TiDB-Doc-CN.pdf
