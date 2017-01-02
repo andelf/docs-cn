@@ -6,6 +6,9 @@ set -e
 MAINFONT="WenQuanYi Micro Hei"
 MONOFONT="WenQuanYi Micro Hei Mono"
 
+MAINFONT="Tsentsiu Sans HG"
+MONOFONT="Tsentsiu Sans Console HG"
+
 _version_tag="$(date '+%Y%m%d').$(git rev-parse --short HEAD)"
 
 pandoc -N --toc --smart --latex-engine=xelatex \
@@ -13,7 +16,7 @@ pandoc -N --toc --smart --latex-engine=xelatex \
     --listings \
     -V title="TiDB 中文手册" \
     -V author="PingCAP Inc." \
-    -V date="v1.0~rc1+${_version_tag}" \
+    -V date="v1.0\$\sim\$rc1+${_version_tag}" \
     -V CJKmainfont="${MAINFONT}" \
     -V mainfont="${MAINFONT}" \
     -V sansfont="${MAINFONT}" \
